@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <header><h1>comment book</h1></header>
+    <main>
+      <section id="add-message">
+        <h2>Enter the message</h2>
+        <form method="post" action="{{ url_for('add_comment') }}">
+          <input
+            type="text"
+            name="author"
+            placeholder="your name"
+            required
+          /><textarea
+            name="content"
+            placeholder="your message"
+            required
+          ></textarea
+          ><button type="submit">Send</button>
+        </form>
+      </section>
+      <section id="messages">
+        <h2>messages</h2>
+        <ul>
+          {% for message in messages%}
+          <li>
+            <strong>{{ message.author }}</strong>:{{ message.content }}<br />
+            likes: {{message.likes}}
+            <a href="{{ url_for('like', index=loop.index0) }}">like</a>
+            <a href="{{url_for('delete_comment', index=loop.index0)}}"
+              >delete</a
+            >
+          </li>
+          {% endfor %}
+        </ul>
+      </section>
+    </main>
+    <footer><p>my project</p></footer>
+  </body>
+</html>

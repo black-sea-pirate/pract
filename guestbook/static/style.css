@@ -1,0 +1,90 @@
+/* Сброс стилей (необязательно, но полезно) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Основной стиль для body */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+  padding: 20px;
+}
+
+/* Стили для header */
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Стили для основной секции */
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Форма добавления сообщения */
+#add-message form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#add-message input[type="text"],
+#add-message textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Кнопка отправки */
+#add-message button {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #28a745;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+#add-message button:hover {
+  background-color: #218838;
+}
+
+/* Стили для списка сообщений */
+#messages ul {
+  list-style: none;
+  margin-top: 20px;
+}
+
+#messages li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+#messages a {
+  text-decoration: none;
+  color: #007bff;
+  margin-right: 10px;
+}
+
+#messages a:hover {
+  text-decoration: underline;
+}
+
+/* Стили для footer */
+footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #666;
+}
